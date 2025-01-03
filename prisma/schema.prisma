@@ -14,16 +14,14 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Post {
+model Base {
     id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
 
-    createdBy   User   @relation(fields: [createdById], references: [id])
-    createdById String
-
-    @@index([name])
+    @@index([id])
+    owner User @relation(fields: [ownerId], references: [id])
+    ownerId String
+    name String
+    data Json
 }
 
 // Necessary for Next auth
@@ -62,7 +60,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
-    posts         Post[]
+    bases         Base[]
 }
 
 model VerificationToken {

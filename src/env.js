@@ -11,7 +11,7 @@ export const env = createEnv({
       process.env.NODE_ENV === "production"
         ? z.string()
         : z.string().optional(),
-    DATABASE_URL: z.string().url(),
+    POSTGRES_DATABASE_URL: z.string().url(),
     GOOGLE_ID: z.string(), 
     GOOGLE_SECRET: z.string(),
     NODE_ENV: z
@@ -37,7 +37,7 @@ export const env = createEnv({
     // Google auth
     GOOGLE_ID: process.env.GOOGLE_ID,
     GOOGLE_SECRET: process.env.GOOGLE_SECRET,
-    DATABASE_URL: process.env.DATABASE_URL,
+    POSTGRES_DATABASE_URL: process.env.POSTGRES_DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
   },
   /**

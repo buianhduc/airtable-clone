@@ -1,9 +1,8 @@
 import "@/styles/globals.css";
-
+import {HydrateClient} from "@/trpc/server";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { SessionProvider } from "next-auth/react";
-
 import { TRPCReactProvider } from "@/trpc/react";
 
 export const metadata: Metadata = {
@@ -15,6 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+
   return (
     <SessionProvider>
     <html lang="en" className={`${GeistSans.variable}`}>

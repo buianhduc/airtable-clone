@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --color-background-default: #fff;
+        --elevation-low: 0px 0px 1px rgba(0, 0, 0, 0.32), 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.08);
+        --elevation-medium: 0px 0px 1px rgba(0, 0, 0, 0.32), 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.08);
+        --palette-gray-gray25: rgb(249, 250, 251);
+    }
+}
+
+/*.homescreen {*/
+/*    position: absolute;*/
+/*    top: 48px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    overflow: auto;*/
+/*    margin: auto;*/
+/*    text-align: center;*/
+/*}*/
